@@ -1,0 +1,33 @@
+{
+  "name": "Tangle",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "29",
+  "background": {
+    "page": "ext/background.html"
+  },
+  "content_scripts": [
+      {
+          "matches": [
+              "https://www.github.com/*",
+              "https://github.com/*"
+          ],
+          "run_at": "document_start",
+          "all_frames": true,
+          "js": [
+              "ext/content.js",
+              "ext/github.js",
+              "ext/visual.js",
+              "ext/pr.js"
+          ]
+      }
+  ],
+  "permissions": [
+    "identity",
+    "experimental",
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
