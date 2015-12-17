@@ -16,7 +16,7 @@
           "all_frames": true,
           "js": [
               "ext/content.js",
-              "ext/github.js",
+              "lib/github.js",
               "ext/visual.js",
               "ext/pr.js"
           ]

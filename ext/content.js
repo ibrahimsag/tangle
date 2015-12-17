@@ -1,12 +1,11 @@
-function setupPR() {
-    PR()
-}
-
 function setup() {
-    if (/pull\/\d+/.test(window.location.href)) {
-        setupPR();
-        // setTimeout(setupPR, 100);
-    }
+    var github = new Github({
+        token: "<OAUTH_TOKEN>",
+        auth: "oauth"
+    });
+
+    setupPR(github);
+    setupVIS(github);
 }
 
 window.onload = setup;
