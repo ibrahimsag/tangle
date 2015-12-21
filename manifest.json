@@ -14,17 +14,21 @@
           ],
           "run_at": "document_start",
           "all_frames": true,
+          "css": ["css/app.css"],
           "js": [
-              "ext/content.js",
+              "lib/jquery-2.1.4.js",
+              "lib/rx.all.js",
+              "lib/rx.dom.js",
               "lib/github.js",
+              "ext/content.js",
               "ext/visual.js",
-              "ext/pr.js"
+              "ext/pr.js",
+              "rebase.js"
           ]
       }
   ],
   "permissions": [
     "identity",
-    "experimental",
     "tabs",
     "storage",
     "http://*/*",
